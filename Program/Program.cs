@@ -7,10 +7,10 @@ FillCleanArray(magazine, newMagazine);
 PrintMagazine(newMagazine);
 
 void PrintMagazine(string[] newMagazine)
-{
+{    Console.WriteLine("New array of the strings");
     for (int i = 0; i < newMagazine.Length; i++)
     {
-        Console.WriteLine(newMagazine[i]);
+        Console.Write($"{newMagazine[i]}, ");
     }
 }
 
