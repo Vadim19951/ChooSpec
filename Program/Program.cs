@@ -3,8 +3,34 @@ string[] magazine = new string[firstSize];
 FillStringArray(magazine);
 int secondSize = GetCount(magazine);
 string[] newMagazine = new string[secondSize];
+FillCleanArray(magazine, newMagazine);
+PrintMagazine(newMagazine);
 
+void PrintMagazine(string[] newMagazine)
+{
+    for (int i = 0; i < newMagazine.Length; i++)
+    {
+        Console.WriteLine(newMagazine[i]);
+    }
+}
 
+void FillCleanArray(string[] array, string[] array2)
+{
+    for (int i = 0; i < array2.Length; i++)
+    {
+        string temp = String.Empty;
+        for (int j = 0; j < array.Length; j++)
+        {
+            temp = array[j];
+            if (temp.Length <= 3)
+            {
+                array2[i] = temp;
+                i++;
+            }
+            temp = String.Empty;
+        }
+    }
+}
 
 int GetCount(string[] array)
 {
